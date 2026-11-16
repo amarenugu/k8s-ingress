@@ -39,7 +39,11 @@ kind: Ingress
 metadata:
   name: app-1
   annotations:
-    alb-ingress.kubernetes.io/schema: internet-facing
+    alb-ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:142559108283:certificate/30068a0e-9006-4683-a9b1-1500aed239ae
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/tags: Environment=dev,Team=test
 spec:
   ingressClassName: alb
   rules:
