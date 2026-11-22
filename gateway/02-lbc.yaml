@@ -9,4 +9,4 @@ spec:
   listenerConfigurations:
   - protocolPort: HTTPS:443
     certificates:
-    -
+    - arn:aws:acm:us-east-1:142559108283:certificate/30068a0e-9006-4683-a9b1-1500aed239ae
